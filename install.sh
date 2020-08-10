@@ -41,10 +41,10 @@ if [ $num == 1 ]; then
 		echo "";
 		git clone https://github.com/Coldwave96/HackINonE.git "$INSTALL_DIR";
 		echo "#!/bin/bash
-		python3 $INSTALL_DIR/HackINonE.py" '${1+"$@"}' > HackINonE;
-		sudo chmod +x HackINonE;
-		sudo cp HackINonE $BIN_DIR;
-		rm HackINonE;
+		python3 $INSTALL_DIR/HackINonE.py" '${1+"$@"}' > hackINone;
+		sudo chmod +x hackINone;
+		sudo cp hackINone $BIN_DIR;
+		rm hackINone;
 		echo "";
 		echo "[✔] Trying to installing Requirements ..."
 		sudo apt-get install -y figlet
@@ -61,7 +61,7 @@ if [ $num == 1 ]; then
         echo "";
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
         echo 		"		[+]						      		[+]"
-        echo -e "		[+]     ✔✔✔ Now Just Type In Terminal (HackINonE) ✔✔✔ 	[+]"
+        echo -e "		[+]     ✔✔✔ Now Just Type In Terminal (hackINone) ✔✔✔ 	[+]"
         echo 		"		[+]						      		[+]"
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
     else

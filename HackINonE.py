@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # coding: UTF-8
-# Version 0.1
 
 import os
 import sys
@@ -29,7 +28,7 @@ class Main:
         logo()
 
     def clear(self):
-        if system() == 'Linux':
+        if system() == 'Linux' or 'Mac':
             os.system('clear')
         if system() == 'Windows':
             os.system('cls')
@@ -51,8 +50,8 @@ class Main:
         print('''
         [01] Hide Yourself
         [02] Gather Information
-        [00] Exit
         [99] Update or Uninstall
+        [00] Exit
         ''')
 
         func_menu = {
@@ -168,14 +167,17 @@ class Main:
     def nmap(self):
         self.clear()
         os.system('echo \"Nmap - the Network Mapper\"')
-        num = input('[1]Install [0]Back $$ ')
+        num = input('[1]Install [2]Start [0]Back $$ ')
 
-        self.check_num(num, self.nmap, ['1', '0'])
+        self.check_num(num, self.nmap, ['1', '2', '0'])
 
         if num == '1':
             os.system("sudo git clone https://github.com/nmap/nmap.git")
             os.system("sudo chmod -R 755 nmap && cd nmap && sudo ./configure && make && sudo make install")
             self.nmap()
+
+        if num == '2':
+            self.ports()
 
         if num == '0':
             self.info()
@@ -242,9 +244,7 @@ class Main:
             sleep(1)
             os.system("sudo chmod +x /etc/;sudo chmod +x /usr/share/doc;sudo rm -rf /usr/share/doc/HackINonE/;cd /etc/;sudo rm -rf /etc/HackINonE/;")
             print("\nHackINonE Successfully Uninstall..")
-            print("Thank You For Supporting ^.^")
-            sleep(1)
-            self.uninstall()
+            self.exit()
 
         if num == "0":
             self.update()
@@ -253,51 +253,9 @@ if __name__ == '__main__':
     version = 'v0.1'
     run = Main()
     try:
-        if system() == 'Linux':
-            fpath = "/home/HackINonE.txt"
-            try:
-                with open(fpath, 'r') as f:
-                    archive = f.readline()
-
-                    try:
-                        os.chdir(archive)
-                        run.menu()
-
-                    # If the directory does not exist
-                    except FileNotFoundError:
-                        os.mkdir(archive)
-                        os.chdir(archive)
-                        run.menu()
-
-            except FileNotFoundError:
-                os.system('clear')
-                run.menu()
-
-                print("""
-                            [*] Set Path (All the tools will be install in that directory)
-                            [1] Manual 
-                            [2] Default
-                    """)
-
-                num = input("HackINonE $$ ")
-
-                if num == "1":
-                    inpath = input("Enter Path (with Directory Name) >> ")
-                    with open(fpath, "w") as f:
-                        f.write(inpath)
-
-                    print("Successfully Path Set...!!")
-
-                if num == "2":
-                    autopath = "/home/HackINonE/"
-                    with open(fpath, "w") as f:
-                        f.write(autopath)
-
-                    print(f"Your Default Path Is:- {autopath}")
-                    sleep(3)
-
-                else:
-                    print("Try Again..!!")
+        if system() == 'Linux' or 'Mac':
+            os.system('clear')
+            run.menu()
 
         # If not Linux and probably Windows
         elif system() == "Windows":
