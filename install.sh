@@ -21,15 +21,15 @@ read num
 INSTALL_DIR="/usr/share/doc/HackINonE"
 BIN_DIR="/usr/bin/"
 if [ $num == 1 ]; then
-	echo "[*] Checking Internet Connection .."
+	echo "\033[1;34m [*] Checking Internet Connection .. \033[1;34m"
 	wget -q --tries=10 --timeout=20 --spider https://github.com
 	if [[ $? -eq 0 ]]; then
-	   echo -e "[✔] Loading ... "
+	   echo -e "\033[1;34m [✔] Loading ... \033[1;34m"
 	    sudo apt-get update && apt-get upgrade
 	    sudo apt-get install python-pip
-	    echo "[✔] Checking directories..."
+	    echo "\033[1;34m [✔] Checking directories... \033[1;34m"
 	    if [ -d "$INSTALL_DIR" ]; then
-	        echo "[!] A Directory HackINonE Was Found.. Do You Want To Replace It ? [y/n]:" ;
+	        echo "\033[1;31m [!] A Directory HackINonE Was Found.. Do You Want To Replace It ? [y/n]:  \033[0m" ;
 	        read input
 	        if [ "$input" = "y" ]; then
 	            rm -R "$INSTALL_DIR"
@@ -37,7 +37,7 @@ if [ $num == 1 ]; then
 	            exit
 	        fi
 	    fi
-    		echo "[✔] Installing ...";
+    		echo "\033[1;34m [✔] Installing ... \033[1;34m";
 		echo "";
 		git clone https://github.com/Coldwave96/HackINonE.git "$INSTALL_DIR";
 		echo "#!/bin/bash
@@ -46,17 +46,20 @@ if [ $num == 1 ]; then
 		sudo cp hackINone $BIN_DIR;
 		rm hackINone;
 		echo "";
-		echo "[✔] Trying to installing Requirements ..."
+		echo "\033[1;34m [✔] Trying to installing Requirements ... \033[1;34m"
 		sudo apt-get install -y figlet
+		sudo apt-get install boxes
+		sudo pip3 install lolcat
+		sudo pip3 install boxes
 		sudo pip3 install flask
 		sudo pip3 install requests
 	else
-		echo -e $RED "Please Check Your Internet Connection ..!!"
+		echo -e "\033[1;31m Please Check Your Internet Connection ..!! \033[0m"
 	fi
 
     if [ -d "$INSTALL_DIR" ]; then
         echo "";
-        echo "[✔] Successfuly Installed !!! ";
+        echo "\033[1;34m [✔] Successfuly Installed !!! \033[1;34m";
         echo "";
         echo "";
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
@@ -65,13 +68,13 @@ if [ $num == 1 ]; then
         echo 		"		[+]						      		[+]"
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
     else
-        echo "[✘] Installation Failed !!! [✘]";
+        echo "\033[1;31m [✘] Installation Failed !!! [✘] \033[0m";
         exit
     fi
 elif [ $num -eq 0 ];
 then
-    echo -e $RED "[✘] Thank You !! [✘] "
+    echo -e "\033[1;34m [✘] Thank You !! [✘] \033[1;34m"
     exit
 else
-    echo -e $RED "[!] Select Valid Option [!]"
+    echo -e "\033[1;31m [!] Select Valid Option [!] \033[0m"
 fi

@@ -28,7 +28,7 @@ class Main:
         logo()
 
     def clear(self):
-        if system() == 'Linux' or 'Mac':
+        if system() == 'Linux':
             os.system('clear')
         if system() == 'Windows':
             os.system('cls')
@@ -79,7 +79,7 @@ class Main:
     ###### Module[01] ######
     def hide(self):
         self.clear()
-        os.system('figlet -f standard -c Hacker Hiding Tools')
+        os.system('figlet -f standard -c Hacker Hiding Tools | lolcat | boxes -d dog -a c')
 
         print('''
             [01] Anonmously Surf
@@ -104,13 +104,13 @@ class Main:
 
     def anonsurf(self):
         self.clear()
-        os.system('echo \"Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p as well.\"')
+        os.system('echo \"Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p as well.\" | lolcat | boxes -d peek -a c')
         num = input('[1]Install [2]Run [3]Stop [0]Main Menu $$ ')
 
         self.check_num(num, self.anonsurf, ['1', '2', '3', '0'])
 
         if num == '1':
-            os.system("sudo git clone https://github.com/Und3rf10w/kali-anonsurf.git")
+            os.system("cd /usr/share/doc/HackINonE && sudo git clone https://github.com/Und3rf10w/kali-anonsurf.git")
             os.system("cd kali-anonsurf && sudo ./installer.sh && cd .. && sudo rm -r kali-anonsurf")
             self.anonsurf()
 
@@ -127,13 +127,13 @@ class Main:
 
     def multitor(self):
         self.clear()
-        os.system('echo \"Multitor provides one single endpoint for clients. Supports HAProxy, socks protocol and http-proxy servers: polipo, privoxy and hpts.\"')
+        os.system('echo \"Multitor provides one single endpoint for clients. Supports HAProxy, socks protocol and http-proxy servers: polipo, privoxy and hpts.\" | lolcat | boxes -d peek -a c')
         num = input('[1]Install [0]Back $$ ')
 
         self.check_num(num, self.multitor, ['1', '0'])
 
         if num == '1':
-            os.system("sudo git clone https://github.com/trimstray/multitor")
+            os.system("cd /usr/share/doc/HackINonE && sudo git clone https://github.com/trimstray/multitor")
             os.system("cd multitor;sudo bash setup.sh install")
             self.multitor()
 
@@ -143,7 +143,7 @@ class Main:
     ###### Module[02] ######
     def info(self):
         self.clear()
-        os.system("figlet -f standard -c Information Gathering Tools")
+        os.system("figlet -f standard -c Information Gathering Tools | lolcat | boxes -d dog -a c")
 
         print('''
             [01] Nmap
@@ -166,13 +166,13 @@ class Main:
 
     def nmap(self):
         self.clear()
-        os.system('echo \"Nmap - the Network Mapper\"')
+        os.system('echo \"Nmap - the Network Mapper\" | lolcat | boxes -d peek -a c')
         num = input('[1]Install [2]Start [0]Back $$ ')
 
         self.check_num(num, self.nmap, ['1', '2', '0'])
 
         if num == '1':
-            os.system("sudo git clone https://github.com/nmap/nmap.git")
+            os.system("cd /usr/share/doc/HackINonE && sudo git clone https://github.com/nmap/nmap.git")
             os.system("sudo chmod -R 755 nmap && cd nmap && sudo ./configure && make && sudo make install")
             self.nmap()
 
@@ -250,10 +250,10 @@ class Main:
             self.update()
 
 if __name__ == '__main__':
-    version = 'v0.1'
+    version = 'v0.11'
     run = Main()
     try:
-        if system() == 'Linux' or 'Mac':
+        if system() == 'Linux':
             os.system('clear')
             run.menu()
 
