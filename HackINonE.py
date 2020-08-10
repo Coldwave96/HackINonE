@@ -79,7 +79,7 @@ class Main:
     ###### Module[01] ######
     def hide(self):
         self.clear()
-        os.system('figlet -f standard -c Hacker Hiding Tools | lolcat | boxes -d dog -a hcvc')
+        os.system('figlet -f standard -c Hacker Hiding Tools | boxes -d dog -a hcvc | lolcat')
 
         print('''
             [01] Anonmously Surf
@@ -104,7 +104,7 @@ class Main:
 
     def anonsurf(self):
         self.clear()
-        os.system('echo \"Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p as well.\" | lolcat | boxes -d peek -a hcvc')
+        os.system('echo \"Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p as well.\" | boxes -d peek -a hcvc | lolcat')
         num = input('[1]Install [2]Run [3]Stop [0]Main Menu $$ ')
 
         self.check_num(num, self.anonsurf, ['1', '2', '3', '0'])
@@ -127,7 +127,7 @@ class Main:
 
     def multitor(self):
         self.clear()
-        os.system('echo \"Multitor provides one single endpoint for clients. Supports HAProxy, socks protocol and http-proxy servers: polipo, privoxy and hpts.\" | lolcat | boxes -d peek -a hcvc')
+        os.system('echo \"Multitor provides one single endpoint for clients. Supports HAProxy, socks protocol and http-proxy servers: polipo, privoxy and hpts.\" | boxes -d peek -a hcvc | lolcat')
         num = input('[1]Install [0]Back $$ ')
 
         self.check_num(num, self.multitor, ['1', '0'])
@@ -143,7 +143,7 @@ class Main:
     ###### Module[02] ######
     def info(self):
         self.clear()
-        os.system("figlet -f standard -c Information Gathering Tools | lolcat | boxes -d dog -a hcvc")
+        os.system("figlet -f standard -c Information Gathering Tools | boxes -d dog -a hcvc | lolcat")
 
         print('''
             [01] Nmap
@@ -166,7 +166,7 @@ class Main:
 
     def nmap(self):
         self.clear()
-        os.system('echo \"Nmap - the Network Mapper\" | lolcat | boxes -d peek -a hcvc')
+        os.system('echo \"Nmap - the Network Mapper\" | boxes -d peek -a hcvc | lolcat')
         num = input('[1]Install [2]Start [0]Back $$ ')
 
         self.check_num(num, self.nmap, ['1', '2', '0'])
