@@ -1,18 +1,11 @@
 #!/bin/bash
 clear
 
-BLACK='\e[30m'
 RED='\e[31m'
-GREEN='\e[92m'
-YELLOW='\e[33m'
 ORANGE='\e[93m'
 BLUE='\e[34m'
-PURPLE='\e[35m'
-CYAN='\e[36m'
-WHITE='\e[37m'
-NC='\e[0m'
-purpal='\033[35m'
 
+echo -e "${ORANGE} "
 echo ""
 echo "______  __            ______ ________                   __________";
 echo "___  / / /_____ _________  /_____  _/______________________  ____/";
@@ -21,28 +14,28 @@ echo "_  __  / / /_/ // /__ _  ,<  __/ /  _  / / / /_/ /  / / /  /___   ";
 echo "/_/ /_/  \__,_/ \___/ /_/|_| /___/  /_/ /_/\____//_/ /_//_____/   ";
 echo "                                                                  ";
 
-echo "${BLUE}                                 Produced By Coldsnap ${NC}";
+echo "                                              Produced By Coldsnap";
 echo ""
-echo "${RED}      [!] Attention Please!!! This Tool MUst Run As Root [!]       ${NC}"
+echo "      [!] Attention Please!!! This Tool MUst Run As Root [!]      ";
 echo ""
-echo "${CYAN} Select Your System: ${NC}"
+echo "Select Your System: "
 echo ""
-echo "${WHITE} [1] Kali Linux ${NC}"
-echo "${WHITE} [0] Exit ${NC}"
+echo "$[1] Kali Linux "
+echo "$[0] Exit "
 echo -n -e "HackINonE >> "
 read num
 INSTALL_DIR="/usr/share/doc/HackINonE"
 BIN_DIR="/usr/bin/"
 if [ $num == 1 ]; then
-	echo "${GREEN} [*] Checking Internet Connection ... ${NC}"
+	echo "[*] Checking Internet Connection ... "
 	wget -q --tries=10 --timeout=20 --spider https://github.com
 	if [[ $? -eq 0 ]]; then
-	   echo -e ${BLUE}"[✔] Loading ... "
+	   echo -e $BLUE "[✔] Loading ... "
 	    sudo apt-get update && apt-get upgrade
 	    sudo apt-get install python-pip
-	    echo "${GREEN} [✔] Checking directories... ${NC}"
+	    echo "[✔] Checking directories... "
 	    if [ -d "$INSTALL_DIR" ]; then
-	        echo "${YELLOW} [!] A Directory HackINonE Was Found.. Do You Want To Replace It ? [y/n]: ${NC}";
+	        echo " [!] A Directory HackINonE Was Found.. Do You Want To Replace It ? [y/n]: ";
 	        read input
 	        if [ "$input" = "y" ]; then
 	            rm -R "$INSTALL_DIR"
@@ -50,7 +43,7 @@ if [ $num == 1 ]; then
 	            exit
 	        fi
 	    fi
-    		echo "${PURPLE} [✔] Installing ... ${NC}";
+    		echo "[✔] Installing ... ";
 		echo "";
 		git clone https://github.com/Coldwave96/HackINonE.git "$INSTALL_DIR";
 		echo "#!/bin/bash
@@ -59,7 +52,7 @@ if [ $num == 1 ]; then
 		sudo cp hackINone $BIN_DIR;
 		rm hackINone;
 		echo "";
-		echo "${purpal}[✔] Trying to installing Requirements ... ${NC}"
+		echo "[✔] Trying to installing Requirements ... "
 		sudo apt-get install -y figlet
 		sudo apt-get install boxes
 		sudo pip3 install lolcat
@@ -81,7 +74,7 @@ if [ $num == 1 ]; then
         echo 		"		[+]						      		[+]"
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
     else
-        echo "${BLACK}[✘] Installation Failed !!! [✘]${NC}";
+        echo "[✘] Installation Failed !!! [✘]";
         exit
     fi
 elif [ $num -eq 0 ];
