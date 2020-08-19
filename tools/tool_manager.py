@@ -13,7 +13,7 @@ class UpdateTool(HackINonE):
     def __init__(self):
         super(UpdateTool, self).__init__([
             ("Update System", self.update_sys),
-            ("Update Hackingtool", self.update_ht)
+            ("Update HackINonE", self.update_ht)
         ], installable=False, runnable=False)
 
     def update_sys(self):
@@ -24,20 +24,20 @@ class UpdateTool(HackINonE):
     def update_ht(self):
         os.system("sudo chmod +x /etc/;"
                   "sudo chmod +x /usr/share/doc;"
-                  "sudo rm -rf /usr/share/doc/hackingtool/;"
+                  "sudo rm -rf /usr/share/doc/HackINonE/;"
                   "cd /etc/;"
-                  "sudo rm -rf /etc/hackingtool/;"
-                  "mkdir hackingtool;"
-                  "cd hackingtool;"
-                  "git clone https://github.com/Z4nzu/hackingtool.git;"
-                  "cd hackingtool;"
+                  "sudo rm -rf /etc/hackINone/;"
+                  "mkdir HackINonE;"
+                  "cd HackINonE;"
+                  "git clone https://github.com/Z4nzu/HackINonE.git;"
+                  "cd HackINonE;"
                   "sudo chmod +x install.sh;"
                   "./install.sh")
 
 
 class UninstallTool(HackINonE):
-    TITLE = "Uninstall HackingTool"
-    DESCRIPTION = "Uninstall HackingTool"
+    TITLE = "Uninstall HackINonE"
+    DESCRIPTION = "Uninstall HackINonE"
 
     def __init__(self):
         super(UninstallTool, self).__init__([
@@ -45,20 +45,20 @@ class UninstallTool(HackINonE):
         ], installable=False, runnable=False)
 
     def uninstall(self):
-        print("hackingtool started to uninstall..\n")
+        print("HackINonE started to uninstall..\n")
         sleep(1)
         os.system("sudo chmod +x /etc/;"
                   "sudo chmod +x /usr/share/doc;"
-                  "sudo rm -rf /usr/share/doc/hackingtool/;"
+                  "sudo rm -rf /usr/share/doc/HackINonE/;"
                   "cd /etc/;"
-                  "sudo rm -rf /etc/hackingtool/;")
-        print("\nHackingtool Successfully Uninstalled..")
+                  "sudo rm -rf /etc/hackINone/;")
+        print("\nHackINonE Successfully Uninstalled..")
         print("Happy Hacking..!!")
         sleep(1)
 
 
 class ToolManager(HackINonECollection):
-    TITLE = "Update or Uninstall | Hackingtool"
+    TITLE = "Update or Uninstall | HackINonE"
     TOOLS = [
         UpdateTool(),
         UninstallTool()
