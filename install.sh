@@ -30,7 +30,7 @@ if [ $num == 1 ]; then
 	echo "[*] Checking Internet Connection ... "
 	wget -q --tries=10 --timeout=20 --spider https://github.com
 	if [[ $? -eq 0 ]]; then
-	   echo -e $BLUE "[✔] Loading ... "
+	    echo -e $BLUE "[✔] Loading ... "
 	    sudo apt-get update && apt-get upgrade
 	    sudo apt-get install python-pip
 	    echo "[✔] Checking directories... "
@@ -70,9 +70,9 @@ if [ $num == 1 ]; then
         echo "";
         echo "";
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
-        echo    "		[+]						      		                                        [+]"
+        echo    "		[+]						      		[+]"
         echo -e "		[+]          Now Just Type In Terminal (hackINone)     	        [+]"
-        echo    "		[+]						      		                                        [+]"
+        echo    "		[+]						      		[+]"
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
     else
         echo "[✘] Installation Failed !!! [✘]";
