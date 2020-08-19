@@ -163,6 +163,6 @@ class WebAttackTools(HackINonECollection):
         Dirb(),
         Subdomain3(),
         WAFW00F(),
-        Xwaf()，
+        Xwaf(),
         WhatWaf()
     ]
