@@ -58,7 +58,7 @@ class UninstallTool(HackINonE):
 
 
 class ToolManager(HackINonECollection):
-    TITLE = "Update or Uninstall | HackINonE"
+    TITLE = "Update or Uninstall HackINonE"
     TOOLS = [
         UpdateTool(),
         UninstallTool()

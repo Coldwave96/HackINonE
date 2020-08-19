@@ -128,5 +128,5 @@ if __name__ == "__main__":
             print("Please Check Your Sytem or Open new issue ...")
 
     except KeyboardInterrupt:
-        print("\nExiting ..!!!")
+        print("\nExiting ...!!!")
         sleep(2)
