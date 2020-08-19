@@ -33,7 +33,7 @@ class Multitor(HackINonE):
     PROJECT_URL = "https://github.com/trimstray/multitor"
 
     def __init__(self):
-        super(Multitor, self).__init__(runnable = False)
+        super(Multitor, self).__init__(runnable=False)
 
 
 class AnonSurfTools(HackINonECollection):

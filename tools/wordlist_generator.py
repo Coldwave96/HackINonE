@@ -11,7 +11,7 @@ class Cupp(HackINonE):
     PROJECT_URL = "https://github.com/Mebus/cupp.git"
 
     def __init__(self):
-        super(Cupp, self).__init__(runnable = False)
+        super(Cupp, self).__init__(runnable=False)
 
 
 class WlCreator(HackINonE):
@@ -20,8 +20,7 @@ class WlCreator(HackINonE):
                   " of passwords,\n and you can choose Lenght, Lowercase, " \
                   "Capital, Numbers and Special Chars"
     INSTALL_COMMANDS = ["sudo git clone https://github.com/Z4nzu/wlcreator.git"]
-    RUN_COMMANDS = [
-        "cd wlcreator && sudo gcc -o wlcreator wlcreator.c && ./wlcreator 5"]
+    RUN_COMMANDS = ["cd wlcreator && sudo gcc -o wlcreator wlcreator.c && ./wlcreator 5"]
     PROJECT_URL = "https://github.com/Z4nzu/wlcreator"
 
 
@@ -34,7 +33,7 @@ class GoblinWordGenerator(HackINonE):
     PROJECT_URL = "https://github.com/UndeadSec/GoblinWordGenerator.git"
 
 
-class showme(HackINonE):
+class Showme(HackINonE):
     TITLE = "Password list (1.4 Billion Clear Text Password)"
     DESCRIPTION = "This tool allows you to perform OSINT and reconnaissance on " \
                   "an organisation or an individual. It allows one to search " \
@@ -55,5 +54,5 @@ class WordlistGeneratorTools(HackINonECollection):
         Cupp(),
         WlCreator(),
         GoblinWordGenerator(),
-        showme()
+        Showme()
     ]

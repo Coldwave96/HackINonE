@@ -49,8 +49,7 @@ class Faceshell(HackINonE):
         name = input("Enter Username >> ")
         wordlist = input("Enter Wordlist >> ")
         os.system("cd Brute_Force;")
-        subprocess.run(
-            ["python3", "Brute_Force.py", "-f", f"{name}", "-l", f"{wordlist}"])
+        subprocess.run(["python3", "Brute_Force.py", "-f", f"{name}", "-l", f"{wordlist}"])
 
 
 class AppCheck(HackINonE):

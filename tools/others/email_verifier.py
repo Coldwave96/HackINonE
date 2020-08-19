@@ -16,4 +16,6 @@ class KnockMail(HackINonE):
 
 class EmailVerifyTools(HackINonECollection):
     TITLE = "Email Verify tools"
-    TOOLS = [KnockMail()]
+    TOOLS = [
+        KnockMail()
+    ]

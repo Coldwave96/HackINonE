@@ -1,4 +1,5 @@
 # coding=utf-8
+import os
 import subprocess
 
 from core import HackINonE
@@ -8,8 +9,7 @@ from core import HackINonECollection
 class Web2Attack(HackINonE):
     TITLE = "Web2Attack"
     DESCRIPTION = "Web hacking framework with tools, exploits by python"
-    INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/santatic/web2attack.git"]
+    INSTALL_COMMANDS = ["sudo git clone https://github.com/santatic/web2attack.git"]
     RUN_COMMANDS = ["cd web2attack && sudo bash w2aconsole"]
     PROJECT_URL = "https://github.com/santatic/web2attack"
 
@@ -25,7 +25,7 @@ class Skipfish(HackINonE):
     ]
 
     def __init__(self):
-        super(Skipfish, self).__init__(installable = False)
+        super(Skipfish, self).__init__(installable=False)
 
 
 class SubDomainFinder(HackINonE):
@@ -48,8 +48,7 @@ class CheckURL(HackINonE):
     TITLE = "CheckURL"
     DESCRIPTION = "Detect evil urls that uses IDN Homograph Attack.\n\t" \
                   "[!] python3 checkURL.py --url google.com"
-    INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/UndeadSec/checkURL.git"]
+    INSTALL_COMMANDS = ["sudo git clone https://github.com/UndeadSec/checkURL.git"]
     RUN_COMMANDS = ["cd checkURL && python3 checkURL.py --help"]
     PROJECT_URL = "https://github.com/UndeadSec/checkURL"
 
@@ -79,7 +78,7 @@ class SubDomainTakeOver(HackINonE):
     PROJECT_URL = "https://github.com/m4ll0k/takeover"
 
     def __init__(self):
-        super(SubDomainTakeOver, self).__init__(runnable = False)
+        super(SubDomainTakeOver, self).__init__(runnable=False)
 
 
 class Dirb(HackINonE):
@@ -95,8 +94,60 @@ class Dirb(HackINonE):
     PROJECT_URL = "https://gitlab.com/kalilinux/packages/dirb"
 
     def run(self):
-        uinput = input("Enter Url >> ")
-        subprocess.run(["sudo", "dirb", uinput])
+        url = input("Enter Url >> ")
+        subprocess.run(["sudo", "dirb", url])
+
+
+class Subdomain3(HackINonE):
+    TITLE = "Subdomain3"
+    DESCRIPTION = "Subdomain3 is a new generation of tool , It helps penetration testers " \
+                  "\n to discover more information in a shorter time than other tools." \
+                  "\n The information includes subdomains, IP, CDN, and so on."
+    INSTALL_COMMANDS = [
+        'git clone https://github.com/yanxiu0614/subdomain3.git',
+        'cd subdomain3;sudo pip install -r requirement.txt'
+    ]
+    PROJECT_URL = "https://github.com/yanxiu0614/subdomain3"
+
+    def run(self):
+        target = input("Enter Domain >> ")
+        os.system('cd subdomain3')
+        subprocess.run(["sudo", "python3", "brutedns.py", '-d', target, '-s', 'high', "-l", "5"])
+
+
+class WAFW00F(HackINonE):
+    TITLE = "WAFW00F"
+    DESCRIPTION = "The Web Application Firewall Fingerprinting Tool. "
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/EnableSecurity/wafw00f.git",
+        "cd wafw00f;sudo python setup.py install"
+    ]
+    PROJECT_URL = "https://github.com/EnableSecurity/wafw00f"
+
+    def run(self):
+        url = input("Enter Url >> ")
+        subprocess.run(['wafw00f', url])
+
+
+class Xwaf(HackINonE):
+    TITLE = "XWAF"
+    DESCRIPTION = "Automatic bypass waf by brute force."
+    INSTALL_COMMANDS = ["git clone https://github.com/3xp10it/xwaf.git"]
+    PROJECT_URL = "https://github.com/3xp10it/xwaf"
+
+    def __init__(self):
+        super(Xwaf, self).__init__(runnable=False)
+
+
+class WhatWaf(HackINonE):
+    TITLE = "WhatWaf"
+    DESCRIPTION = "Detect and bypass web application firewalls and protection systems."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/ekultek/whatwaf.git",
+        "cd whatwaf && sudo chmod +x setup.sh && sudo ./setup.sh install"
+    ]
+    RUN_COMMANDS = ["whatwaf"]
+    PROJECT_URL = "https://github.com/ekultek/whatwaf"
 
 
 class WebAttackTools(HackINonECollection):
@@ -109,5 +160,8 @@ class WebAttackTools(HackINonECollection):
         CheckURL(),
         Blazy(),
         SubDomainTakeOver(),
-        Dirb()
+        Dirb(),
+        Subdomain3(),
+        WAFW00F(),
+        Xwaf()
     ]

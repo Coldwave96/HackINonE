@@ -30,8 +30,7 @@ class FacialFind(HackINonE):
                 You have to set Username and password of your AC Or Any Fack Account
                 [#] Type in Terminal nano social_mapper.py
         """)
-        os.system(
-            'echo "python social_mapper.py -f [<imageFoldername>] -i [<imgFolderPath>] -m fast [<AcName>] -fb -tw"| boxes | lolcat')
+        os.system('echo "python social_mapper.py -f [<imageFoldername>] -i [<imgFolderPath>] -m fast [<AcName>] -fb -tw"| boxes | lolcat')
 
 
 class FindUser(HackINonE):

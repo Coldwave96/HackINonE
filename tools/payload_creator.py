@@ -23,8 +23,7 @@ class TheFatRat(HackINonE):
         ])
 
     def update(self):
-        os.system(
-            "cd TheFatRat && bash update && chmod +x setup.sh && bash setup.sh")
+        os.system("cd TheFatRat && bash update && chmod +x setup.sh && bash setup.sh")
 
     def troubleshoot(self):
         os.system("cd TheFatRat && sudo chmod +x chk_tools && ./chk_tools")
@@ -49,7 +48,7 @@ class Brutal(HackINonE):
             >> Arduino Software (I used v1.6.7)
             >> TeensyDuino
             >> Linux udev rules
-            >> Copy and paste the PaensyLib folder inside your Arduino\libraries
+            >> Copy and paste the PaensyLib folder inside your Arduino/libraries
     
         [!] Kindly Visit below link for Installation for Arduino 
             >> https://github.com/Screetsec/Brutal/wiki/Install-Requirements 
@@ -112,8 +111,7 @@ class MobDroid(HackINonE):
     TITLE = "Mob-Droid"
     DESCRIPTION = "Mob-Droid helps you to generate metasploit payloads in " \
                   "easy way\n without typing long commands and save your time"
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/kinghacker0/mob-droid.git"]
+    INSTALL_COMMANDS = ["git clone https://github.com/kinghacker0/mob-droid.git"]
     RUN_COMMANDS = ["cd Mob-Droid;sudo python mob-droid.py"]
     PROJECT_URL = "https://github.com/kinghacker0/Mob-Droid"
 
@@ -121,8 +119,7 @@ class MobDroid(HackINonE):
 class Enigma(HackINonE):
     TITLE = "Enigma"
     DESCRIPTION = "Enigma is a Multiplatform payload dropper"
-    INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/UndeadSec/Enigma.git"]
+    INSTALL_COMMANDS = ["sudo git clone https://github.com/UndeadSec/Enigma.git"]
     RUN_COMMANDS = ["cd Enigma;sudo python3 enigma3.py"]
     PROJECT_URL = "https://github.com/UndeadSec/Enigma"
 

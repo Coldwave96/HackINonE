@@ -55,6 +55,7 @@ if [ $num == 1 ]; then
 		echo "[✔] Trying to installing Requirements ... "
 		sudo apt-get install -y figlet
 		sudo apt-get install boxes
+		sudo apt-get install gedit
 		sudo pip3 install lolcat
 		sudo pip3 install boxes
 		sudo pip3 install flask
@@ -69,9 +70,9 @@ if [ $num == 1 ]; then
         echo "";
         echo "";
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
-        echo 		"		[+]						      		[+]"
-        echo -e "		[+]     ✔✔✔ Now Just Type In Terminal (hackINone) ✔✔✔ 	[+]"
-        echo 		"		[+]						      		[+]"
+        echo 		"		[+]						      		                                        [+]"
+        echo -e "		[+]       ✔✔✔ Now Just Type In Terminal (hackINone) ✔✔✔ 	      [+]"
+        echo 		"		[+]						      		                                        [+]"
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
     else
         echo "[✘] Installation Failed !!! [✘]";

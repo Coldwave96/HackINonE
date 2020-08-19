@@ -16,7 +16,7 @@ class Sqlmap(HackINonE):
     PROJECT_URL = "https://github.com/sqlmapproject/sqlmap"
 
     def __init__(self):
-        super(Sqlmap, self).__init__(runnable = False)
+        super(Sqlmap, self).__init__(runnable=False)
 
 
 class NoSqlMap(HackINonE):
@@ -43,7 +43,7 @@ class SQLiScanner(HackINonE):
     PROJECT_URL = "https://github.com/stamparm/DSSS"
 
     def __init__(self):
-        super(SQLiScanner, self).__init__(runnable = False)
+        super(SQLiScanner, self).__init__(runnable=False)
 
 
 class Explo(HackINonE):
@@ -60,7 +60,7 @@ class Explo(HackINonE):
     PROJECT_URL = "https://github.com/dtag-dev-sec/explo"
 
     def __init__(self):
-        super(Explo, self).__init__(runnable = False)
+        super(Explo, self).__init__(runnable=False)
 
 
 class Blisqy(HackINonE):
@@ -73,7 +73,7 @@ class Blisqy(HackINonE):
     PROJECT_URL = "https://github.com/JohnTroony/Blisqy"
 
     def __init__(self):
-        super(Blisqy, self).__init__(runnable = False)
+        super(Blisqy, self).__init__(runnable=False)
 
 
 class Leviathan(HackINonE):
@@ -104,6 +104,28 @@ class SQLScan(HackINonE):
     PROJECT_URL = "https://github.com/Cvar1984/sqlscan"
 
 
+class NoSQLAttack(HackINonE):
+    TITLE = "NoSQLAttack"
+    DESCRIPTION = "NoSQLAttack is an open source Python tool \n" \
+                  "to automate exploit MongoDB server IP on Internet \n" \
+                  "and disclose the database data by MongoDB \n" \
+                  "default configuration weaknesses and injection attacks."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/youngyangyang04/NoSQLAttack.git",
+        'cd NoSQLAttack; sudo python setup.py install'
+    ]
+    RUN_COMMANDS = ['NoSQLAttack']
+    PROJECT_URL = "https://github.com/youngyangyang04/NoSQLAttack"
+
+
+class Enumdb(HackINonE):
+    TITLE = "enumdb"
+    DESCRIPTION = "Relational database brute force and post exploitation tool for MySQL and MSSQL."
+    INSTALL_COMMANDS = ["pip3 install enumdb"]
+    RUN_COMMANDS = ['enumdb']
+    PROJECT_URL = "https://github.com/m8r0wn/enumdb"
+
+
 class SqlInjectionTools(HackINonECollection):
     TITLE = "SQL Injection Tools"
     TOOLS = [
@@ -113,5 +135,7 @@ class SqlInjectionTools(HackINonECollection):
         Explo(),
         Blisqy(),
         Leviathan(),
-        SQLScan()
+        SQLScan(),
+        NoSQLAttack(),
+        Enumdb()
     ]

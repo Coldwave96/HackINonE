@@ -6,8 +6,7 @@ from core import HackINonECollection
 class DebInject(HackINonE):
     TITLE = "Debinject"
     DESCRIPTION = "Debinject is a tool that inject malicious code into *.debs"
-    INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/UndeadSec/Debinject.git"]
+    INSTALL_COMMANDS = ["sudo git clone https://github.com/UndeadSec/Debinject.git"]
     RUN_COMMANDS = ["cd Debinject;python debinject.py"]
     PROJECT_URL = "https://github.com/UndeadSec/Debinject"
 
@@ -23,10 +22,7 @@ class Pixload(HackINonE):
     PROJECT_URL = "https://github.com/chinarulezzz/pixload"
 
     def __init__(self):
-        # super(Pixload, self).__init__([
-        #     ('How To Use', self.show_project_page)
-        # ], runnable = False)
-        super(Pixload, self).__init__(runnable = False)
+        super(Pixload, self).__init__(runnable=False)
 
 
 class PayloadInjectorTools(HackINonECollection):

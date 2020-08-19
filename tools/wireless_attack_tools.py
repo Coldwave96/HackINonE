@@ -22,7 +22,7 @@ class WIFIPumpkin(HackINonE):
     PROJECT_URL = "https://github.com/P0cL4bs/wifipumpkin3"
 
 
-class pixiewps(HackINonE):
+class Pixiewps(HackINonE):
     TITLE = "pixiewps"
     DESCRIPTION = "Pixiewps is a tool written in C used to bruteforce offline " \
                   "the WPS pin\n " \
@@ -133,8 +133,8 @@ class Howmanypeople(HackINonE):
                   "especially on networks that you do not own. " \
                   "Please check your country's laws"
     INSTALL_COMMANDS = [
-        "sudo apt-get install tshark"
-        ";sudo pip install howmanypeoplearearound"
+        "sudo apt-get install tshark",
+        "sudo pip install howmanypeoplearearound"
     ]
     RUN_COMMANDS = ["sudo howmanypeoplearearound"]
 
@@ -144,7 +144,7 @@ class WirelessAttackTools(HackINonECollection):
     DESCRIPTION = ""
     TOOLS = [
         WIFIPumpkin(),
-        pixiewps(),
+        Pixiewps(),
         BluePot(),
         Fluxion(),
         Wifiphisher(),

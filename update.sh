@@ -8,7 +8,7 @@ echo "                                                /_/      ";
 
 clear
 
-sudo chmod +x /etc/
+sudo chmod +x /etc
 
 clear
 
@@ -16,11 +16,11 @@ sudo chmod +x /usr/share/doc
 
 clear
 
-sudo rm -rf /usr/share/doc/HackINonE/
+sudo rm -rf /usr/share/doc/HackINonE
 
 clear
 
-cd /etc/
+cd /etc
 
 clear
 

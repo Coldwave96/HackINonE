@@ -11,9 +11,11 @@ class TerminalMultiplexer(HackINonE):
     INSTALL_COMMANDS = ["sudo apt-get install tilix"]
 
     def __init__(self):
-        super(TerminalMultiplexer, self).__init__(runnable = False)
+        super(TerminalMultiplexer, self).__init__(runnable=False)
 
 
 class MixTools(HackINonECollection):
     TITLE = "Mix tools"
-    TOOLS = [TerminalMultiplexer()]
+    TOOLS = [
+        TerminalMultiplexer()
+    ]

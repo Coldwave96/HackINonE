@@ -14,4 +14,6 @@ class EvilURL(HackINonE):
 
 class IDNHomographAttackTools(HackINonECollection):
     TITLE = "IDN Homograph Attack"
-    TOOLS = [EvilURL()]
+    TOOLS = [
+        EvilURL()
+    ]

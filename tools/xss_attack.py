@@ -35,8 +35,7 @@ class XSSPayloadGenerator(HackINonE):
 class XSSFinder(HackINonE):
     TITLE = "Extended XSS Searcher and Finder"
     DESCRIPTION = "Extended XSS Searcher and Finder"
-    INSTALL_COMMANDS = [
-        "git glone https://github.com/Damian89/extended-xss-search.git"]
+    INSTALL_COMMANDS = ["git glone https://github.com/Damian89/extended-xss-search.git"]
     PROJECT_URL = "https://github.com/Damian89/extended-xss-search"
 
     def after_install(self):
@@ -102,7 +101,7 @@ class XanXSS(HackINonE):
               " [!]python xanxss.py [Options]")
 
 
-class XSSStrike(HackINonE):
+class XSStrike(HackINonE):
     TITLE = "Advanced XSS Detection Suite"
     DESCRIPTION = "XSStrike is a python script designed to detect and exploit XSS vulnerabilites."
     INSTALL_COMMANDS = [
@@ -113,7 +112,7 @@ class XSSStrike(HackINonE):
     PROJECT_URL = "https://github.com/UltimateHackers/XSStrike"
 
     def __init__(self):
-        super(XSSStrike, self).__init__(runnable = False)
+        super(XSStrike, self).__init__(runnable=False)
 
 
 class RVuln(HackINonE):
@@ -140,6 +139,6 @@ class XSSAttackTools(HackINonECollection):
         XSpear(),
         XSSCon(),
         XanXSS(),
-        XSSStrike(),
+        XSStrike(),
         RVuln()
     ]

@@ -19,7 +19,7 @@ class NMAP(HackINonE):
     PROJECT_URL = "https://github.com/nmap/nmap"
 
     def __init__(self):
-        super(NMAP, self).__init__(runnable = False)
+        super(NMAP, self).__init__(runnable=False)
 
 
 class Dracnmap(HackINonE):
@@ -33,14 +33,14 @@ class Dracnmap(HackINonE):
     PROJECT_URL = "https://github.com/Screetsec/Dracnmap"
 
     def __init__(self):
-        super(Dracnmap, self).__init__(runnable = False)
+        super(Dracnmap, self).__init__(runnable=False)
 
 
 class PortScan(HackINonE):
     TITLE = "Port scanning"
 
     def __init__(self):
-        super(PortScan, self).__init__(installable = False)
+        super(PortScan, self).__init__(installable=False)
 
     def run(self):
         clear_screen()
@@ -52,7 +52,7 @@ class Host2IP(HackINonE):
     TITLE = "Host to IP "
 
     def __init__(self):
-        super(Host2IP, self).__init__(installable = False)
+        super(Host2IP, self).__init__(installable=False)
 
     def run(self):
         clear_screen()
@@ -76,8 +76,7 @@ class XeroSploit(HackINonE):
 class RedHawk(HackINonE):
     TITLE = "RED HAWK (All In One Scanning)"
     DESCRIPTION = "All in one tool for Information Gathering and Vulnerability Scanning."
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/Tuhinshubhra/RED_HAWK.git"]
+    INSTALL_COMMANDS = ["git clone https://github.com/Tuhinshubhra/RED_HAWK.git"]
     RUN_COMMANDS = ["cd RED_HAWK;php rhawk.php"]
     PROJECT_URL = "https://github.com/Tuhinshubhra/RED_HAWK"
 
@@ -95,7 +94,7 @@ class ReconSpider(HackINonE):
     PROJECT_URL = "https://github.com/bhavsec/reconspider"
 
     def __init__(self):
-        super(ReconSpider, self).__init__(runnable = False)
+        super(ReconSpider, self).__init__(runnable=False)
 
 
 class IsItDown(HackINonE):
@@ -104,7 +103,7 @@ class IsItDown(HackINonE):
 
     def __init__(self):
         super(IsItDown, self).__init__(
-            [('Open', self.open)], installable = False, runnable = False)
+            [('Open', self.open)], installable=False, runnable=False)
 
     def open(self):
         webbrowser.open_new_tab("https://www.isitdownrightnow.com/")
@@ -158,7 +157,7 @@ class SecretFinder(HackINonE):
     PROJECT_URL = "https://github.com/m4ll0k/SecretFinder"
 
     def __init__(self):
-        super(SecretFinder, self).__init__(runnable = False)
+        super(SecretFinder, self).__init__(runnable=False)
 
 
 class Shodan(HackINonE):
@@ -170,7 +169,7 @@ class Shodan(HackINonE):
     PROJECT_URL = "https://github.com/m4ll0k/Shodanfy.py"
 
     def __init__(self):
-        super(Shodan, self).__init__(runnable = False)
+        super(Shodan, self).__init__(runnable=False)
 
 
 class PortScannerRanger(HackINonE):
@@ -179,7 +178,8 @@ class PortScannerRanger(HackINonE):
                   "all alive hosts within your range that you specify."
     INSTALL_COMMANDS = [
         "git clone https://github.com/floriankunushevci/rang3r.git;"
-        "sudo pip install termcolor"]
+        "sudo pip install termcolor"
+    ]
     PROJECT_URL = "https://github.com/floriankunushevci/rang3r"
 
     def run(self):
@@ -195,7 +195,84 @@ class Breacher(HackINonE):
     PROJECT_URL = "https://github.com/s0md3v/Breacher"
 
     def __init__(self):
-        super(Breacher, self).__init__(runnable = False)
+        super(Breacher, self).__init__(runnable=False)
+
+
+class XCDN(HackINonE):
+    TITLE = "XCDN"
+    DESCRIPTION = "Try to find out the real ip behind cdn."
+    INSTALL_COMMANDS = ["git clone https://github.com/3xp10it/xcdn.git"]
+    PROJECT_URL = "https://github.com/3xp10it/xcdn"
+
+    def run(self):
+        url = input("Enter Url >> ")
+        os.system('cd xcdn')
+        subprocess.run(['sudo', 'python3', 'xdn.py', url])
+
+
+class TideFinger(HackINonE):
+    TITLE = "TideFinger"
+    DESCRIPTION = "A tool which is used for analysing web finger."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/TideSec/TideFinger.git;"
+        "sudo pip install lxml requests bs4"
+    ]
+    PROJECT_URL = "https://github.com/TideSec/TideFinger"
+
+    def run(self):
+        url = input("Enter Url >> ")
+        os.system("cd TideFinger")
+        subprocess.run(['sudo', 'python', 'TiderFinger.py', '-u', url])
+
+
+class GooHak(HackINonE):
+    TITLE = "GooHak"
+    DESCRIPTION = "Automatically Launch Google Hacking Queries Against A Target Domain."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/1N3/Goohak.git",
+        "cd Goohak; sudo chmod +x goohak"
+    ]
+    PROJECT_URL = "https://github.com/1N3/Goohak"
+
+    def run(self):
+        target = input("Enter Domain >> ")
+        os.system('cd Goohak')
+        subprocess.run(['sudo', './goohak', target])
+
+
+class GitMiner(HackINonE):
+    TITLE = "GitMiner"
+    DESCRIPTION = "Tool for advanced mining for content on Github."
+    INSTALL_COMMANDS = [
+        "git clone http://github.com/UnkL4b/GitMiner",
+        "cd GitMiner; sudo pip3 install -r requirements.txt"
+    ]
+    PROJECT_URL = "https://github.com/UnkL4b/GitMiner"
+
+    def __init__(self):
+        super(GitMiner, self).__init__(runnable=False)
+
+
+class R3con1z3r(HackINonE):
+    TITLE = "R3con1z3r"
+    DESCRIPTION = "R3con1z3r is a lightweight Web information gathering tool \n" \
+                  "with an intuitive features written in python.\n" \
+                  "it provides a powerful environment in which open source intelligence (OSINT) " \
+                  "\nweb-based footprinting can be conducted quickly and thoroughly."
+    INSTALL_COMMANDS = ["pip install r3con1z3r"]
+    RUN_COMMANDS = ['r3con1z3r']
+    PROJECT_URL = "https://github.com/abdulgaphy/r3con1z3r"
+
+
+class Dumpall(HackINonE):
+    TITLE = "Dump all"
+    DESCRIPTION = "/.git /.svn /.DS_Store folder disclosure exploit tool."
+    INSTALL_COMMANDS = ["pip install dumpall"]
+    PROJECT_URL = "https://github.com/0xHJK/dumpall"
+
+    def run(self):
+        target = input("Enter Url >> ")
+        subprocess.run(['sudo', 'dumpall', '-u', target])
 
 
 class InformationGatheringTools(HackINonECollection):
@@ -215,5 +292,11 @@ class InformationGatheringTools(HackINonECollection):
         SecretFinder(),
         Shodan(),
         PortScannerRanger(),
-        Breacher()
+        Breacher(),
+        XCDN(),
+        TideFinger(),
+        GooHak(),
+        GitMiner(),
+        R3con1z3r(),
+        Dumpall()
     ]

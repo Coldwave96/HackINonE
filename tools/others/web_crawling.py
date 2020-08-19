@@ -15,4 +15,6 @@ class GoSpider(HackINonE):
 
 class WebCrawlingTools(HackINonECollection):
     TITLE = "Web crawling"
-    TOOLS = [GoSpider()]
+    TOOLS = [
+        GoSpider()
+    ]

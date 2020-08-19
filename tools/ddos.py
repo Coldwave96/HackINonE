@@ -33,8 +33,7 @@ class Asyncrone(HackINonE):
         target_ip = input("Enter Target IP >> ")
         target_port = input("Enter Target port >> ")
         os.system("cd aSYNcrone;")
-        subprocess.run([
-            "sudo", "./aSYNcrone", source_port, target_ip, target_port, 1000])
+        subprocess.run(["sudo", "./aSYNcrone", source_port, target_ip, target_port, 1000])
 
 
 class UFONet(HackINonE):

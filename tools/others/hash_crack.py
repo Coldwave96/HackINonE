@@ -18,4 +18,6 @@ class HashBuster(HackINonE):
 
 class HashCrackingTools(HackINonECollection):
     TITLE = "Hash cracking tools"
-    TOOLS = [HashBuster()]
+    TOOLS = [
+        HashBuster()
+    ]

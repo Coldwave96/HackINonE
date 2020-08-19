@@ -25,6 +25,10 @@ from tools.webattack import WebAttackTools
 from tools.wireless_attack_tools import WirelessAttackTools
 from tools.wordlist_generator import WordlistGeneratorTools
 from tools.xss_attack import XSSAttackTools
+from tools.vulnerablitiy_scanner import VulnScanTools
+from tools.iot_tools import IOTTools
+from tools.weak_pass_brute import WeakPwdBruteTools
+
 
 def logo():
     banner = '''\033[33m
@@ -39,13 +43,16 @@ _  __  / / /_/ // /__ _  ,<       __/ /  _  /|  /    / /_/ /  / / /  /___
        \033[34m[*] Personal Blog: https://coldwave96.github.io [*]
        \033[34m[*]   https://github.com/Coldwave96/HackINonE   [*]
        \033[91m[*]    Please Don't Use It As An Illegal Way    [*]
-    \033[97m '''.format(version)
+       \033[97m '''.format(version)
+
     print(banner + '\033[0m \033[97m')
+
 
 all_tools = [
     AnonSurfTools(),
     InformationGatheringTools(),
     WordlistGeneratorTools(),
+    WeakPwdBruteTools(),
     WirelessAttackTools(),
     SqlInjectionTools(),
     PhishingAttackTools(),
@@ -59,9 +66,12 @@ all_tools = [
     RemoteAdministrationTools(),
     XSSAttackTools(),
     SteganographyTools(),
+    VulnScanTools(),
+    IOTTools(),
     OtherTools(),
     ToolManager()
 ]
+
 
 class AllTools(HackINonECollection):
     TITLE = "All tools"
@@ -70,6 +80,7 @@ class AllTools(HackINonECollection):
     def show_info(self):
         logo()
 
+
 if __name__ == "__main__":
     version = "v0.2"
     try:
@@ -77,7 +88,6 @@ if __name__ == "__main__":
             fpath = "/home/HackINonE.txt"
             if not os.path.exists(fpath):
                 os.system('clear')
-                # run.menu()
                 print("""
                         [@] Set Path (All your tools will be install in that directory)
                         [1] Manual 
@@ -110,8 +120,7 @@ if __name__ == "__main__":
 
         # If not Linux and probably Windows
         elif system() == "Windows":
-            print(
-                "\033[91m Please Run This Tool In Debian System For Best Result " "\e[00m")
+            print("\033[91m Please Run This Tool In Debian System For Best Result " "\e[00m")
             sleep(2)
             webbrowser.open_new_tab("https://tinyurl.com/y522modc")
 

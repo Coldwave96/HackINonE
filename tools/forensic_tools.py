@@ -14,7 +14,7 @@ class Autopsy(HackINonE):
     RUN_COMMANDS = "sudo autopsy"
 
     def __init__(self):
-        super(Autopsy, self).__init__(installable = False)
+        super(Autopsy, self).__init__(installable=False)
 
 
 class Wireshark(HackINonE):
@@ -25,35 +25,31 @@ class Wireshark(HackINonE):
     RUN_COMMANDS = ["sudo wireshark"]
 
     def __init__(self):
-        super(Wireshark, self).__init__(installable = False)
+        super(Wireshark, self).__init__(installable=False)
 
 
 class BulkExtractor(HackINonE):
     TITLE = "Bulk extractor"
-    DESCRIPTION = ""
+    DESCRIPTION = "An Investigating Tool"
     PROJECT_URL = "https://github.com/simsong/bulk_extractor"
 
     def __init__(self):
         super(BulkExtractor, self).__init__([
             ('GUI Mode (Download required)', self.gui_mode),
             ('CLI Mode', self.cli_mode)
-        ], installable = False, runnable = False)
+        ], installable=False, runnable=False)
 
     def gui_mode(self):
-        os.system(
-            "sudo git clone https://github.com/simsong/bulk_extractor.git")
+        os.system("sudo git clone https://github.com/simsong/bulk_extractor.git")
         os.system("ls src/ && cd .. && cd java_gui && ./BEViewer")
-        print(
-            "If you getting error after clone go to /java_gui/src/ And Compile .Jar file && run ./BEViewer")
-        print(
-            "Please Visit For More Details About Installation >> https://github.com/simsong/bulk_extractor")
+        print("If you getting error after clone go to /java_gui/src/ And Compile .Jar file && run ./BEViewer")
+        print("Please Visit For More Details About Installation >> https://github.com/simsong/bulk_extractor")
 
     def cli_mode(self):
         os.system("sudo apt-get install bulk_extractor")
         print("bulk_extractor and options")
         os.system("bulk_extractor")
-        os.system(
-            'echo "bulk_extractor [options] imagefile" | boxes -d headline | lolcat')
+        os.system('echo "bulk_extractor [options] imagefile" | boxes -d headline | lolcat')
 
 
 class Guymager(HackINonE):
@@ -77,7 +73,7 @@ class Toolsley(HackINonE):
     PROJECT_URL = "https://www.toolsley.com/"
 
     def __init__(self):
-        super(Toolsley, self).__init__(installable = False, runnable = False)
+        super(Toolsley, self).__init__(installable=False, runnable=False)
 
 
 class ForensicTools(HackINonECollection):

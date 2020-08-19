@@ -30,7 +30,7 @@ class KawaiiDeauther(HackINonE):
 
 
 class WifiJammingTools(HackINonECollection):
-    TITLE = "Wifi Deauthenticate"
+    TITLE = 'Wifi Deauthenticate'
     TOOLS = [
         WifiJammerNG(),
         KawaiiDeauther()

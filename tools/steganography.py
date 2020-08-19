@@ -14,14 +14,14 @@ class SteganoHide(HackINonE):
         choice_run = input(
             "[1] Hide\n"
             "[2] Extract\n"
-            "[99]Cancel\n"
+            "[0]Cancel\n"
             ">> ")
-        choice_run = validate_input(choice_run, [1, 2, 99])
+        choice_run = validate_input(choice_run, [1, 2, 0])
         if choice_run is None:
             print("Please choose a valid input")
             return self.run()
 
-        if choice_run == 99:
+        if choice_run == 0:
             return
 
         if choice_run == 1:
