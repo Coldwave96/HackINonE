@@ -160,11 +160,10 @@ class HackINonECollection(object):
         self.show_info()
         for index, tool in enumerate(self.TOOLS):
             print("[{:2}] {}".format(index, tool.TITLE))
-        print("[{:2}] {}".format(
-            99, ("Back to " + parent.TITLE) if parent is not None else "Exit"))
-        tool_index = input("Choose a tool to proceed: ")
+        print("[{:2}] {}".format(99, ("Back to " + parent.TITLE) if parent is not None else "Exit"))
+        tool_index = int(input("Choose a tool to proceed: "))
         try:
-            tool_index = int(tool_index)
+            #tool_index = int(tool_index)
             if tool_index in range(len(self.TOOLS)):
                 ret_code = self.TOOLS[tool_index].show_options(parent=self)
                 if ret_code != 99:

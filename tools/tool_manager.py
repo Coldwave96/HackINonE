@@ -29,7 +29,7 @@ class UpdateTool(HackINonE):
                   "sudo rm -rf /etc/hackINone/;"
                   "mkdir HackINonE;"
                   "cd HackINonE;"
-                  "git clone https://github.com/Z4nzu/HackINonE.git;"
+                  "git clone https://github.com/Coldwave96/HackINonE.git;"
                   "cd HackINonE;"
                   "sudo chmod +x install.sh;"
                   "./install.sh")
