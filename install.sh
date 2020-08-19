@@ -35,7 +35,7 @@ if [ $num == 1 ]; then
 	    sudo apt-get install python-pip
 	    echo "[*] Checking directories... "
 	    if [ -d "$INSTALL_DIR" ]; then
-	        echo " [!] A Directory HackINonE Was Found.. Do You Want To Replace It ? [y/n]: ";
+	        echo "[!] A Directory HackINonE Was Found.. Do You Want To Replace It ? [y/n]: ";
 	        read input
 	        if [ "$input" = "y" ]; then
 	            rm -R "$INSTALL_DIR"
@@ -56,6 +56,7 @@ if [ $num == 1 ]; then
 		sudo apt-get install -y figlet
 		sudo apt-get install boxes
 		sudo apt-get install gedit
+                sudo apt-get install python3-pip
 		sudo pip3 install lolcat
 		sudo pip3 install boxes
 		sudo pip3 install flask
