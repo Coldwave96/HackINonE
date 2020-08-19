@@ -82,7 +82,7 @@ class AllTools(HackINonECollection):
 
 
 if __name__ == "__main__":
-    version = "v0.2"
+    version = "v1.0"
     try:
         if system() == 'Linux':
             fpath = "/home/HackINonE.txt"

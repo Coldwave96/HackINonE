@@ -18,8 +18,7 @@ class MySMS(HackINonE):
     DESCRIPTION = "Script that generates an Android App to hack SMS through WAN \n" \
                   "[!] You have to install Some Manually Refer Below Link:\n\t " \
                   "[+] https://github.com/papusingh2sms/mysms"
-    INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/papusingh2sms/mysms.git"]
+    INSTALL_COMMANDS = ["sudo git clone https://github.com/papusingh2sms/mysms.git"]
     RUN_COMMANDS = ["cd mysms && bash mysms.sh"]
     PROJECT_URL = "https://github.com/papusingh2sms/mysms"
 
@@ -29,8 +28,7 @@ class LockPhish(HackINonE):
     DESCRIPTION = "Lockphish it's the first tool for phishing attacks on the " \
                   "lock screen, designed to\n Grab Windows credentials,Android" \
                   " PIN and iPhone Passcode using a https link."
-    INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/JasonJerry/lockphish.git"]
+    INSTALL_COMMANDS = ["sudo git clone https://github.com/JasonJerry/lockphish.git"]
     RUN_COMMANDS = ["cd lockphish && bash lockphish.sh"]
     PROJECT_URL = "https://github.com/JasonJerry/lockphish"
 
@@ -50,8 +48,7 @@ class EvilApp(HackINonE):
     TITLE = "EvilApp (Hijack Session)"
     DESCRIPTION = "EvilApp is a script to generate Android App that can " \
                   "hijack authenticated sessions in cookies."
-    INSTALL_COMMANDS = [
-        "sudo git clone https://github.com/crypticterminal/EvilApp.git"]
+    INSTALL_COMMANDS = ["sudo git clone https://github.com/crypticterminal/EvilApp.git"]
     RUN_COMMANDS = ["cd evilapp && bash evilapp.sh"]
     PROJECT_URL = "https://github.com/crypticterminal/EvilApp"
 
