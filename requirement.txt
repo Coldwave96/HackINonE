@@ -2,3 +2,4 @@ lolcat
 boxes
 flask
 requests
+gedit
