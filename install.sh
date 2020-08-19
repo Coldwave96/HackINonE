@@ -70,9 +70,9 @@ if [ $num == 1 ]; then
         echo "";
         echo "";
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
-        echo 		"		[+]						      		                                        [+]"
-        echo -e "		[+]       ✔✔✔ Now Just Type In Terminal (hackINone) ✔✔✔ 	      [+]"
-        echo 		"		[+]						      		                                        [+]"
+        echo "		        [+]						      		[+]"
+        echo -e "		[+]       ✔✔✔ Now Just Type In Terminal (hackINone) ✔✔✔ 	[+]"
+        echo "		        [+]						      		[+]"
         echo -e "		[+]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[+]"
     else
         echo "[✘] Installation Failed !!! [✘]";
