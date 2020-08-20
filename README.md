@@ -8,8 +8,11 @@
 
 <p align="center">
   <a><img src="https://img.shields.io/badge/Python-3-blue"></a>
-  <a><img src="https://img.shields.io/badge/License-Apache--2.0-red"></a>
+  <a><img src="https://img.shields.io/github/license/Coldwave96/HackINonE"></a>
   <a><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Kali%20Linux-orange"></a>
+  <a><img src="https://img.shields.io/github/issues/Coldwave96/HackINonE"></a>
+  <a><img src="https://img.shields.io/github/forks/Coldwave96/HackINonE"></a>
+  <a><img src="https://img.shields.io/github/stars/Coldwave96/HackINonE"></a>
 </p>
 
 <p align="center">
