@@ -7,9 +7,9 @@
 <p>
 
 <p align="center">
-  <a><img src="https://img.shields.io/badge/python-3-blue"></a>
+  <a><img src="https://img.shields.io/badge/Python-3-blue"></a>
   <a><img src="https://img.shields.io/badge/License-Apache--2.0-red"></a>
-  <a><img src="https://img.shields.io/badge/platform-Debian%20%7C%20Kali%20Linux-orange"></a>
+  <a><img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Kali%20Linux-orange"></a>
 </p>
 
 <p align="center">
