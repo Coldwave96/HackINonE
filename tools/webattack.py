@@ -149,6 +149,16 @@ class WhatWaf(HackINonE):
     RUN_COMMANDS = ["whatwaf"]
     PROJECT_URL = "https://github.com/ekultek/whatwaf"
 
+class Weevely3(HackINonE):
+    TITLE = "weevely3"
+    DESCRIPTION = "Weevely - Weaponized web shell"
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/epinna/weevely3.git",
+        "cd weevel3 && sudo pip3 install -r requirements.txt --upgrade"
+    ]
+    RUN_COMMANDS = ["weevely"]
+    PROJECT_URL = "https://github.com/epinna/weevely3"
+
 
 class WebAttackTools(HackINonECollection):
     TITLE = "Web Attack tools"
@@ -164,5 +174,6 @@ class WebAttackTools(HackINonECollection):
         Subdomain3(),
         WAFW00F(),
         Xwaf(),
-        WhatWaf()
+        WhatWaf(),
+        Weevely3()
     ]

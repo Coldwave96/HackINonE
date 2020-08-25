@@ -138,6 +138,7 @@
 - [WAFW00F](https://github.com/EnableSecurity/wafw00f)
 - [XWAF](https://github.com/3xp10it/xwaf)
 - [WhatWaf](https://github.com/ekultek/whatwaf)
+- [weevely3](https://github.com/epinna/weevely3)
 ### Post exploitation tools（投毒模块）
 - [Vegile - Ghost In The Shell](https://github.com/Screetsec/Vegile)
 - [Chrome Keylogger](https://github.com/UndeadSec/HeraKeylogger)
