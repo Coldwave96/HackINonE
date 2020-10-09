@@ -149,15 +149,15 @@ class WhatWaf(HackINonE):
     RUN_COMMANDS = ["whatwaf"]
     PROJECT_URL = "https://github.com/ekultek/whatwaf"
 
-class Weevely3(HackINonE):
-    TITLE = "weevely3"
-    DESCRIPTION = "Weevely - Weaponized web shell"
+class ScanT3r(HackINonE):
+    TITLE = "ScanT3r"
+    DESCRIPTION = "Scant3r - web application vulnerability scanner"
     INSTALL_COMMANDS = [
-        "git clone https://github.com/epinna/weevely3.git",
-        "cd weevel3 && sudo pip3 install -r requirements.txt --upgrade"
+        "git clone https://github.com/knassar702/scant3r",
+        "cd scant3r && pip3 install -r requirements.txt"
     ]
-    RUN_COMMANDS = ["weevely"]
-    PROJECT_URL = "https://github.com/epinna/weevely3"
+    RUN_COMMANDS = ["python3 scant3r.py -h"]
+    PROJECT_URL = "https://github.com/knassar702/scant3r"
 
 
 class WebAttackTools(HackINonECollection):
@@ -175,5 +175,5 @@ class WebAttackTools(HackINonECollection):
         WAFW00F(),
         Xwaf(),
         WhatWaf(),
-        Weevely3()
+        ScanT3r()
     ]
